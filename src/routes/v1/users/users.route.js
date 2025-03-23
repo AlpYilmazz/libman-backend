@@ -169,7 +169,7 @@ router.post(
          * and the value is readily stored rather than calculated at view time
          * since it was mentioned that book viewing is a more frequent process than borrow-return
          */
-        const avgScore = Number(book.avg_score), timesScored = book.times_scored;
+        const avgScore = Number(book.avg_score), timesScored = Number(book.times_scored);
         const newAvgScore = ((avgScore * timesScored) + score) / (timesScored + 1);
 
         const updatedIds = await DB.books()

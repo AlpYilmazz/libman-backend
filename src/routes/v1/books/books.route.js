@@ -41,6 +41,7 @@ router.get(
             res.status(StatusCodes.NOT_FOUND).json({ msg: `Book with given id [${id}] is not found.` });
             return;
         }
+        book.times_scored = Number(book.times_scored);
 
         const bookRes = {
             id: book.id,

@@ -1,0 +1,6 @@
+node_modules/
+postgresql/volume/data/
+
+package-lock.json
+
+.env
